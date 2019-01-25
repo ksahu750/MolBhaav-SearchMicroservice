@@ -3,32 +3,25 @@ package com.eCommerce.searchElastic624.dto;
 import com.eCommerce.searchElastic624.model.Category;
 import com.eCommerce.searchElastic624.model.StaticAttribute;
 
+import java.util.Collection;
 import java.util.List;
 
 public class ProductDTO {
 
     private String productId;
+    private Category category;
     private String productName;
     private String productImageUrl;
-    private String productDescription;
-    private List<StaticAttribute> staticAttributeList;
-    private Category category;
     private String productUsp;
+    private String productDescription;
+    private Collection<StaticAttribute> staticAttributeList;
+    private int merchantCount;
+    private double lowestPrice;
+    private double highestPrice;
+    private String lowestBy;
+    private String highestBy;
 
-    public String getProductUsp() {
-        return productUsp;
-    }
-
-    public void setProductUsp(String productUsp) {
-        this.productUsp = productUsp;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
+    public ProductDTO() {
     }
 
     public String getProductId() {
@@ -37,6 +30,14 @@ public class ProductDTO {
 
     public void setProductId(String productId) {
         this.productId = productId;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public String getProductName() {
@@ -55,6 +56,14 @@ public class ProductDTO {
         this.productImageUrl = productImageUrl;
     }
 
+    public String getProductUsp() {
+        return productUsp;
+    }
+
+    public void setProductUsp(String productUsp) {
+        this.productUsp = productUsp;
+    }
+
     public String getProductDescription() {
         return productDescription;
     }
@@ -63,11 +72,51 @@ public class ProductDTO {
         this.productDescription = productDescription;
     }
 
-    public List<StaticAttribute> getStaticAttributeList() {
+    public Collection<StaticAttribute> getStaticAttributeList() {
         return staticAttributeList;
     }
 
-    public void setStaticAttributeList(List<StaticAttribute> staticAttributeList) {
+    public void setStaticAttributeList(Collection<StaticAttribute> staticAttributeList) {
         this.staticAttributeList = staticAttributeList;
+    }
+
+    public int getMerchantCount() {
+        return merchantCount;
+    }
+
+    public void setMerchantCount(int merchantCount) {
+        this.merchantCount = merchantCount;
+    }
+
+    public double getLowestPrice() {
+        return lowestPrice;
+    }
+
+    public void setLowestPrice(double lowestPrice) {
+        this.lowestPrice = lowestPrice;
+    }
+
+    public double getHighestPrice() {
+        return highestPrice;
+    }
+
+    public void setHighestPrice(double highestPrice) {
+        this.highestPrice = highestPrice;
+    }
+
+    public String getLowestBy() {
+        return lowestBy;
+    }
+
+    public void setLowestBy(String lowestBy) {
+        this.lowestBy = lowestBy;
+    }
+
+    public String getHighestBy() {
+        return highestBy;
+    }
+
+    public void setHighestBy(String highestBy) {
+        this.highestBy = highestBy;
     }
 }

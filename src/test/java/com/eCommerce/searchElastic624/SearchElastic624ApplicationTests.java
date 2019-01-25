@@ -11,6 +11,7 @@ public class SearchElastic624ApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
 	}
 
 }

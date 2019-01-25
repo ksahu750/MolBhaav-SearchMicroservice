@@ -81,7 +81,7 @@ public class ProductServiceImpl implements ProductService {
                 .field("productUsp")
                 .field("productDescription")
                 .field("staticAttributeList.attributeDescription")
-                .fuzziness(2);
+                .fuzziness(1);
 
         NativeSearchQuery build = new NativeSearchQueryBuilder()
                 .withQuery(query)

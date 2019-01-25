@@ -9,18 +9,20 @@ import java.util.Collection;
 public class Product {
     @Id
     private String productId;
-
     private Category category;
-
     private String productName;
-
     private String productImageUrl;
-
     private String productUsp;
-
     private String productDescription;
-
     private Collection<StaticAttribute> staticAttributeList;
+    private int merchantCount;
+    private double lowestPrice;
+    private double highestPrice;
+    private String lowestBy;
+    private String highestBy;
+
+    public Product() {
+    }
 
     public String getProductId() {
         return productId;
@@ -76,5 +78,45 @@ public class Product {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public int getMerchantCount() {
+        return merchantCount;
+    }
+
+    public void setMerchantCount(int merchantCount) {
+        this.merchantCount = merchantCount;
+    }
+
+    public double getLowestPrice() {
+        return lowestPrice;
+    }
+
+    public void setLowestPrice(double lowestPrice) {
+        this.lowestPrice = lowestPrice;
+    }
+
+    public double getHighestPrice() {
+        return highestPrice;
+    }
+
+    public void setHighestPrice(double highestPrice) {
+        this.highestPrice = highestPrice;
+    }
+
+    public String getLowestBy() {
+        return lowestBy;
+    }
+
+    public void setLowestBy(String lowestBy) {
+        this.lowestBy = lowestBy;
+    }
+
+    public String getHighestBy() {
+        return highestBy;
+    }
+
+    public void setHighestBy(String highestBy) {
+        this.highestBy = highestBy;
     }
 }
